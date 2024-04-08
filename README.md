@@ -11,6 +11,9 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Swap ffmpeg-free with ffmpeg
 sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 
+# Install Neofetch
+sudo dnf install -y neofetch
+
 # Installing important applications
 # Install Steam
 sudo dnf install -y steam
