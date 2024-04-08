@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Update and upgrade
+sudo dnf update -y && sudo dnf upgrade -y
+
 # Enable RPM Fusion repositories (free and non-free)
 sudo dnf install -y \
   https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
