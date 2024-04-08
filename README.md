@@ -11,12 +11,50 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Swap ffmpeg-free with ffmpeg
 sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 
+# Installing important applications
 # Install Steam
 sudo dnf install -y steam
 
-# Install Discord
-sudo flatpak install -y discord
+# Install ProtonUp
+sudo flatpak install -y flathub net.davidotek.pupgui2
 
+# Install Flameshot
+sudo dnf install -y flameshot
+
+# Install Heroic Launcher
+sudo flatpak install -y flathub com.heroicgameslauncher.hgl
+
+# Install Signal
+sudo flatpak install -y flathub org.signal.Signal
+
+# Install Discord
+sudo flatpak install -y flathub com.discordapp.Discord
+
+# Install Blender
+sudo flatpak install -y flathub org.blender.Blender
+
+# Install VLC
+sudo flatpak install -y flathub org.videolan.VLC
+
+# Install Cider
+sudo flatpak install -y flathub sh.cider.Cider
+
+# Install ProtonVPN
+sudo flatpak install -y flathub com.protonvpn.www
+
+# Install QBittorrent
+sudo flatpak install -y flathub org.qbittorrent.qBittorrent
+
+# Install Bitwarden
+sudo flatpak install -y flathub com.bitwarden.desktop
+
+# Install Freetube
+sudo flatpak install -y flathub io.freetubeapp.FreeTube
+
+# Install OnlyOffice
+sudo flatpak install -y flathub org.onlyoffice.desktopeditors
+
+# Install Drivers
 # Install NVIDIA drivers
 sudo dnf install -y akmod-nvidia
 
