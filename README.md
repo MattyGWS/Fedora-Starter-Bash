@@ -11,6 +11,12 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Swap ffmpeg-free with ffmpeg
 sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 
+# Install Steam
+sudo dnf install -y steam
+
+# Install Discord
+sudo flatpak install -y discord
+
 # Install NVIDIA drivers
 sudo dnf install -y akmod-nvidia
 
