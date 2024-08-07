@@ -17,6 +17,10 @@ sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 # Install Neofetch
 sudo dnf install -y neofetch
 
+# Install Wine and Winetricks
+sudo dnf install -y wine
+sudo dnf install -y winetricks
+
 # Installing important applications
 # Install Steam
 sudo dnf install -y steam
@@ -59,6 +63,9 @@ sudo flatpak install -y flathub io.freetubeapp.FreeTube
 
 # Install OnlyOffice
 sudo flatpak install -y flathub org.onlyoffice.desktopeditors
+
+# Install MegaSync
+sudo flatpak install -y flathub nz.mega.MEGAsync
 
 # Install Drivers
 # Install NVIDIA drivers
