@@ -9,9 +9,10 @@ sudo dnf install -y \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install app-stream metadata
-sudo dnf4 group update core -y || sudo dnf group upgrade core -y
+# sudo dnf4 group update core -y || sudo dnf group upgrade core -y
 
-# Add Flathub remote if not already added
+# Add Flathub remote if not already added and removes fedoras crappy flatpak repo (why do you exist?!)
+flatpak remote-delete fedora
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Swap ffmpeg-free with ffmpeg and get proper multimediaplayback
@@ -22,6 +23,11 @@ sudo dnf group install -y sound-and-video # Installs useful Sound and Video comp
 
 # Video decoding and acceleration
 sudo dnf install -y ffmpeg-libs libva libva-utils
+
+# Danvinci resolve installation (still neds you to download it from their website)
+sudo dnf install -y apr apr-util mesa-libGLU libxcrypt-compat
+sudo dnf copr enable -y herzen/davinci-helper
+sudo dnf install -y davinci-helper
 
 # If on AMD chipset and used the above, use this
 sudo dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
